@@ -33,7 +33,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <h1>Wizzy Eats</h1>
+        <h1 className='title'>Wizzy Eats</h1>
         <Restaurants restaurants={this.state.restaurants} />
         {/* <Details /> */}
         {/* <Card /> */}

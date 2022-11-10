@@ -1,11 +1,28 @@
 .card{
-  height: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
   width: 30%;
   border: solid 2px red;
   margin: 5px;
+  background-color: #a9c7be;
 }
 
+.img-container{
+  width:100%;
+  height: auto;
+}
 .card-img{
-  width:10%;
-  height: 10%;
+  width: 100%;
+  height:auto; 
+}
+.description{
+  display: flex;
+  font-size: .6rem;
+  align-items: baseline;
+  color: rgb(89, 88, 88);
+
+}
+p{
+  margin: 0; 
 }
