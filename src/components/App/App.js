@@ -5,7 +5,7 @@ import Details from '../Details/Details';
 import Restaurants from '../Restaurants/Restaurants';
 // import Navbar from '../NavBar/Navbar';
 import { fetchData } from '../../apiCalls';
-// import { Route, Switch  } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import './App.css';
 import Navbar from '../Navbar/Navbar';
@@ -45,11 +45,13 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Navbar generateRandom/> 
-        <RandomRest data={ this.generateRandom() } /> 
-        {/* <Restaurants restaurants={this.state.restaurants} /> */}
-        {/* <Details /> */}
-        {/* <Card /> */}
+        <Switch>
+          <Navbar generateRandom />
+          {/* <RandomRest data={this.generateRandom()} /> */}
+          <Restaurants restaurants={this.state.restaurants} />
+         
+         
+        </Switch>
       </div>
     );
   }
