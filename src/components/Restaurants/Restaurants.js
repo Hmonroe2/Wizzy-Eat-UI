@@ -20,6 +20,8 @@ const Restaurants = ({ restaurants, favorites }) => {
         name={rest.name}
         image={rest.image}
         hours={rest.hours}
+        phone={rest.phone}
+        address={rest.address}
       />
     );
   });
