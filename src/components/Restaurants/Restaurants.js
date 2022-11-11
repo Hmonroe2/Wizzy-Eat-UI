@@ -2,9 +2,17 @@ import React from 'react';
 import Card from '../Card/Card';
 import './Restaurants.css';
 
-const Restaurants = (restaurants) => {
-  console.log(restaurants);
-  const restCards = restaurants.restaurants.map((rest) => {
+const Restaurants = ({ restaurants, favorites }) => {
+  console.log(favorites)
+ let data = restaurants
+  if (favorites.length > 0) {
+    data = favorites
+  } else {
+    favorites = []
+    data = restaurants
+  }
+
+  const restCards = data.map((rest) => {
     return (
       <Card
         id={rest.id}

@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import Card from '../Card/Card';
 import Details from '../Details/Details';
 import Restaurants from '../Restaurants/Restaurants';
-// import Navbar from '../NavBar/Navbar';
 import { fetchData } from '../../apiCalls';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navbar from '../Navbar/Navbar';
 import RandomRest from '../RandomRest/RandomRest';
+import FilteredRest from '../FilteredRest/FilteredRest';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       restaurants: '',
-      error: ' '
+      filtered: [],
+      error: ' ',
     };
   }
+
+  filterRestaurants = (value) => {
+    this.setState({ filtered: '' });
+    console.log(value);
+    const byType = this.state.restaurants.filter(
+      (rest) => rest.location === value
+    );
+    return this.setState({ filtered: byType });
+  };
+
   generateRandom = () => {
-    const randomRest = this.state.restaurants[Math.floor(Math.random() * 9)]
-    console.log('i am random+++++++', randomRest)
-    return randomRest
-  }
+    const randomRest = this.state.restaurants[Math.floor(Math.random() * 9)];
+    return randomRest;
+  };
 
   componentDidMount = async () => {
     try {
@@ -33,30 +41,40 @@ class App extends Component {
       this.setState({ error: `There was an error retrieving the data.` });
     }
   };
+  clearFiltered = () => {
+    this.setState({ filtered: [] })
+  }
 
   render() {
-    // console.log(this.generateRandom());
+    console.log('this.state.favorites::',this.state.filtered);
     if (!this.state.restaurants) {
-      return <p> { this.state.error }</p>
+      return <p> {this.state.error}</p>;
     }
     return (
       <div className="App">
-        <Navbar generateRandom />
+        <Navbar filter={this.filterRestaurants} clear={this.clearFiltered} />
         <Switch>
           <Route exact path="/home">
-            <Restaurants restaurants={this.state.restaurants} />
+            <Restaurants
+              restaurants={this.state.restaurants}
+              favorites={this.state.filtered}
+            />
+            {/* {!this.state.filtered && (
+              <Restaurants restaurants={this.state.filtered} />
+            )} */}
           </Route>
-          <Route exact path='/randomRestaurant'>
+          <Route exact path="/randomRestaurant">
             <RandomRest data={this.generateRandom()} />
           </Route>
-          <Route path='/:id'
+          <Route
+            path="/:id"
             render={({ match }) => {
-              return <Details id={match.params.id} name={ match.params.name} /> 
-              
-              }}
-          /> 
-
-          
+              return <Details id={match.params.id} name={match.params.name} />;
+            }}
+          />
+          <Route exact path="/denver">
+            {/* <FilteredRest data={this.state.filtered} />  */}
+          </Route>
         </Switch>
       </div>
     );

@@ -22,7 +22,7 @@ class Details extends Component {
   };
 
   render() {
-    console.log(this.state.restaurant)
+    // console.log(this.state.restaurant)
     return (
       <div>
         <img src={ this.state.restaurant.image} />
