@@ -11,7 +11,8 @@ function RandomRest({ data }) {
         <div className="random-img-container">
           <img className="random-img" src={data.image} />
         </div>
-        <p className='random-name'>  </p>
+        <p className='random-name'>{data.name} </p>
+        
         <img src={ballon } className='ballon'/> 
       </div>
     </section>
