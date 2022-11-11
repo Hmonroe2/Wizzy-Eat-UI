@@ -7,6 +7,7 @@ const Restaurants = (restaurants) => {
   const restCards = restaurants.restaurants.map((rest) => {
     return (
       <Card
+        id={rest.id}
         key={rest.id}
         name={rest.name}
         image={rest.image}

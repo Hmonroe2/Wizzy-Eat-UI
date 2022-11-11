@@ -26,7 +26,7 @@ class App extends Component {
 
   componentDidMount = async () => {
     try {
-      const result = await fetchData();
+      const result = await fetchData('');
       const data = await result.json();
       this.setState({ restaurants: data.restaurants });
     } catch (error) {
@@ -49,6 +49,14 @@ class App extends Component {
           <Route exact path='/randomRestaurant'>
             <RandomRest data={this.generateRandom()} />
           </Route>
+          <Route path='/:id'
+            render={({ match }) => {
+              return <Details id={match.params.id} /> 
+              
+              }}
+          /> 
+
+          
         </Switch>
       </div>
     );
