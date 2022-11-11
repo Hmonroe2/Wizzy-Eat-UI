@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './RandomRest.css'
+import ballon from '../../ballon.png'
 
 function RandomRest({  data }) {
 
@@ -10,10 +11,8 @@ function RandomRest({  data }) {
         <div className="random-img-container">
           <img className="random-img" src={data.image} />
         </div>
-        <p className='random-name'> {data.name} </p>
-        <ul>
-          <li></li>
-        </ul>
+        <p className='random-name'>  </p>
+        <img src={ballon } className='ballon'/> 
       </div>
     </section>
   );

@@ -1,8 +1,16 @@
-.card{
+ .card-containers{
+  display: flex;
+  height: 25rem;
+  width: 15rem;
+ }
+ 
+ 
+ 
+ .card{
   display: flex;
   flex-direction: column;
-  height: 50vh;
-  width: 30%;
+  /* height: 50vh;
+  width: 30%; */
   border: solid 2px red;
   margin: 5px;
   background-color: #a9c7be;
