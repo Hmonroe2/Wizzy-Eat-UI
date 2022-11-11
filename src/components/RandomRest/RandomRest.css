@@ -1,0 +1,31 @@
+.random-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-rest-container {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  border-radius: 10px;
+  height: 65%;
+
+}
+
+.random-img-container {
+  width: 95%;
+}
+
+.random-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.random-name{
+  margin-top: 10%;
+}
