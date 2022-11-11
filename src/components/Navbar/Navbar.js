@@ -16,7 +16,7 @@ function Navbar({ filter, clear}) {
         </Link>
       </h1>
       <button className="nav-button">
-        <Link to="/randomRestaurant"> Random</Link>
+        <Link className='nav-button'to="/randomRestaurant"> Random</Link>
       </button>
       <button
         value="Winter Park"

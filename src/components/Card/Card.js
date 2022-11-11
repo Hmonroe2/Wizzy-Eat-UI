@@ -10,7 +10,7 @@ const Card = ({ name, image, hours, id }) => {
           <img className="card-img" src={image} alt="Restaurant logo" />
         </div>
         <p className="description">Name </p>
-        <p className="card.name">{name}</p>
+        <p className="card-name">{name}</p>
       </div>
     </Link>
   );
