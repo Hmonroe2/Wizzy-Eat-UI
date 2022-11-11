@@ -3,17 +3,29 @@ import logo from '../../logo.svg';
 import Card from '../Card/Card';
 import Details from '../Details/Details';
 import Restaurants from '../Restaurants/Restaurants';
+// import Navbar from '../NavBar/Navbar';
 import { fetchData } from '../../apiCalls';
 // import { Route, Switch  } from 'react-router-dom'
 
 import './App.css';
+import Navbar from '../Navbar/Navbar';
+import RandomRest from '../RandomRest/RandomRest';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       restaurants: '',
+      random: '',
+      error: ' '
     };
+  }
+  generateRandom = () => {
+    const randomRest = this.state.restaurants[Math.floor(Math.random() * 9)]
+    console.log('i am random+++++++', randomRest)
+    return randomRest
+  //  return this.setState({ random: randomRest } )
+    // this.setState({ restaurants: randomRest }) 
   }
 
   componentDidMount = async () => {
@@ -27,14 +39,15 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.restaurants);
+    // console.log(this.generateRandom());
     if (!this.state.restaurants) {
-      return <p> there was an error</p>
+      return <p> { this.state.error }</p>
     }
     return (
       <div className="App">
-        <h1 className='title'>Wizzy Eats</h1>
-        <Restaurants restaurants={this.state.restaurants} />
+        <Navbar generateRandom/> 
+        <RandomRest data={ this.generateRandom() } /> 
+        {/* <Restaurants restaurants={this.state.restaurants} /> */}
         {/* <Details /> */}
         {/* <Card /> */}
       </div>
