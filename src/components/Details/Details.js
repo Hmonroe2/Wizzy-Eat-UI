@@ -4,6 +4,7 @@ import'./Details.css'
 
 class Details extends Component {
   constructor(props) {
+    console.log(props.name)
     super();
     this.state = {
       restaurant: ' ',

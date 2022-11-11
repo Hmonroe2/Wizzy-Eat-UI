@@ -51,7 +51,7 @@ class App extends Component {
           </Route>
           <Route path='/:id'
             render={({ match }) => {
-              return <Details id={match.params.id} /> 
+              return <Details id={match.params.id} name={ match.params.name} /> 
               
               }}
           /> 
