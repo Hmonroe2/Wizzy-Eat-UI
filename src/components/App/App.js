@@ -52,9 +52,12 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.restaurants) {
-      return <div> <Error error={ this.state.error } /> </div>;
-    }
+    if (!this.state.restaurants.length) {
+      return(
+      <div>
+        <Error /> 
+      </div>
+    )}
     return (
       <main className="App">
         <Switch>
