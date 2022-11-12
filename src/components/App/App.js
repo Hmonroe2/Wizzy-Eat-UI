@@ -52,7 +52,7 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.restaurants.length) {
+    if (this.state.error.length) {
       return(
       <div>
         <Error /> 
