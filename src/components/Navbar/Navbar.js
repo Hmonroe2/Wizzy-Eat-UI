@@ -9,14 +9,25 @@ function Navbar({ filter, clear, random }) {
     <div className="nav-container">
       <img src={snoopy} className="snoopy" />
       <h1 className="nav-title">
-        <Link className="nav-title" to="/home" onClick={() => { clear()}}> 
+        <Link
+          className="nav-title"
+          to="/home"
+          onClick={() => {
+            clear();
+          }}>
           Wizzy Eats
         </Link>
       </h1>
-      <button className="nav-button" >
-        <Link className='nav-button' to="/randomRestaurant" onClick={() => {
-          random()
-        }}> Random</Link>
+      <button className="nav-button">
+        <Link
+          className="nav-button"
+          to="/randomRestaurant"
+          onClick={() => {
+            random();
+          }}>
+          {' '}
+          Random
+        </Link>
       </button>
       <button
         value="Winter Park"
@@ -33,6 +44,17 @@ function Navbar({ filter, clear, random }) {
         }}
         className="nav-button">
         Denver
+      </button>
+      <button className="nav-button">
+        {' '}
+        <Link
+          className="nav-button"
+          to="/home"
+          onClick={() => {
+            clear();
+          }}>
+           All
+        </Link>
       </button>
     </div>
   );

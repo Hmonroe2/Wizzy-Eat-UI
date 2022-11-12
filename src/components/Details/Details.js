@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { fetchData } from '../../apiCalls';
 import './Details.css'
 import PropTypes from 'prop-types';
+import Navbar from '../Navbar/Navbar';
 
 
 class Details extends Component {
@@ -11,6 +12,7 @@ class Details extends Component {
     this.state = {
       restaurant: [],
       id: props.id,
+      props: props,
     };
   }
   componentDidMount = async () => {
@@ -27,6 +29,11 @@ class Details extends Component {
     const rest = this.state.restaurant
     return (
       <section className="detail-section">
+        <Navbar
+          filter={this.state.props.filter}
+          clear={this.state.props.clear}
+          random={this.state.props.random}
+        />
         <div className="detail-container">
           <div className="detail-img-container">
             <img className="detail-img" src={rest.image} alt={rest.name} />
@@ -39,7 +46,9 @@ class Details extends Component {
           <p className="card-name">{rest.phone}</p>{' '}
           <p className="description">Hours </p>
           <p className="card-name">{rest.hours}</p>
-          <p className="description" href={rest.website}>Website </p>
+          <p className="description" href={rest.website}>
+            Website{' '}
+          </p>
         </div>
       </section>
     );

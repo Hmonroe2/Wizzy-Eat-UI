@@ -3,12 +3,12 @@ import Card from '../Card/Card';
 import './Restaurants.css';
 import PropTypes from 'prop-types';
 
-const Restaurants = ({ restaurants, favorites }) => {
+const Restaurants = ({ restaurants, filtered }) => {
   let data = restaurants;
-  if (favorites.length > 0) {
-    data = favorites;
+  if (filtered.length) {
+    data = filtered;
   } else {
-    favorites = [];
+    filtered = [];
     data = restaurants;
   }
 
