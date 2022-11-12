@@ -2,8 +2,7 @@
 
 
 .nav-container {
-  margin-bottom: 2%;
-  height: 25%;
+  margin-bottom: 1%;
 }
 
 .nav-title {
@@ -29,7 +28,7 @@
   contain: content;
   font-family: 'Lobster', cursive;
   font-size: 1.3rem;
-  text-decoration: underline;
+  text-decoration:wavy;
 }
 
 .nav-button:hover {
