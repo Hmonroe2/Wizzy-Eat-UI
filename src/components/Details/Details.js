@@ -3,6 +3,8 @@ import { fetchData } from '../../apiCalls';
 import './Details.css';
 import PropTypes from 'prop-types';
 import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
+import Error from '../Error/Error';
 
 class Details extends Component {
   constructor(props) {
@@ -25,7 +27,9 @@ class Details extends Component {
 
   render() {
     if (!this.state.restaurant.length) {
-      return <p> There was an error, please go back to home. </p>
+      return (
+        <Error /> 
+      );
     }
 
     const rest = this.state.restaurant;
