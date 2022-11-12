@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
-import snoopy from '../../up.png'
+import './Navbar.css';
+import snoopy from '../../up.png';
 import PropTypes from 'prop-types';
 
 function Navbar({ filter, clear, random }) {
@@ -25,7 +25,6 @@ function Navbar({ filter, clear, random }) {
           onClick={() => {
             random();
           }}>
-          {' '}
           Random
         </Link>
       </button>
@@ -46,24 +45,23 @@ function Navbar({ filter, clear, random }) {
         Denver
       </button>
       <button className="nav-button">
-        {' '}
         <Link
           className="nav-button"
           to="/home"
           onClick={() => {
             clear();
           }}>
-           All
+          Home
         </Link>
       </button>
     </div>
   );
 }
 
-export default Navbar
+export default Navbar;
 
 Navbar.propTypes = {
   clear: PropTypes.func,
   filter: PropTypes.func,
-  random: PropTypes.func
-}
+  random: PropTypes.func,
+};

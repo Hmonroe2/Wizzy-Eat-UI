@@ -1,10 +1,8 @@
-
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { fetchData } from '../../apiCalls';
-import './Details.css'
+import './Details.css';
 import PropTypes from 'prop-types';
 import Navbar from '../Navbar/Navbar';
-
 
 class Details extends Component {
   constructor(props) {
@@ -18,7 +16,7 @@ class Details extends Component {
   componentDidMount = async () => {
     try {
       const result = await fetchData(`${this.state.id}`);
-      const data = await result.json();
+      const data = await result.jso();
       this.setState({ restaurant: data.restaurant });
     } catch (error) {
       this.setState({ error: `There was an error retrieving the data.` });
@@ -26,7 +24,12 @@ class Details extends Component {
   };
 
   render() {
-    const rest = this.state.restaurant
+    if (!this.state.restaurant.length) {
+      return <p> There was an error, please go back to home. </p>
+    }
+
+    const rest = this.state.restaurant;
+
     return (
       <section className="detail-section">
         <Navbar
@@ -43,9 +46,7 @@ class Details extends Component {
           <p className="description">Address </p>
           <p className="card-name">{rest.address}</p>{' '}
           <p className="description">Phone </p>
-          <p className="card-name">{rest.phone}</p>{' '}
-          <p className="description">Hours </p>
-          <p className="card-name">{rest.hours}</p>
+          <p className="card-name">{rest.phone}</p>
           <p className="description" href={rest.website}>
             Website{' '}
           </p>
@@ -55,10 +56,10 @@ class Details extends Component {
   }
 }
 
-export default Details
+export default Details;
 
 Details.propTypes = {
   restaurant: PropTypes.array,
   id: PropTypes.string,
-  props: PropTypes.string
-}
+  props: PropTypes.string,
+};

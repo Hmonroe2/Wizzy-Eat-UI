@@ -9,7 +9,7 @@ import RandomRest from '../RandomRest/RandomRest';
 import PropTypes from 'prop-types';
 import Welcome from '../Welcome/Welcome';
 import Error from '../Error/Error';
-import FilterRest from '../../FilterRest/FilterRest';
+import DenverRest from '../../FilterRest/DenverRest';
 
 
 class App extends Component {
@@ -53,14 +53,12 @@ class App extends Component {
 
   render() {
     if (!this.state.restaurants) {
-      return <div> <Error error={ this.state.error } /> {this.state.error} </div>;
+      return <div> <Error error={ this.state.error } /> </div>;
     }
     return (
       <main className="App">
-        {/* {!this.state.error.length && <Error /> } */}
         <Switch>
           <Route exact path="/" component={Welcome} />
-
           <Route exact path="/home">
             <Navbar
               filter={this.filterRestaurants}
@@ -92,9 +90,14 @@ class App extends Component {
                   random={this.generateRandom}
                 />
               );
-            }} />
-          <Route path='/:id'>
-          </Route>
+            }}
+          />
+          {/* <Route path="/denver" >
+            <FilterRest data={this.state.restaurants} />
+          </Route> */}
+          {/* <Route exact path="/denver" >
+            <DenverRest data={this.state.restaurants} /> 
+          </Route> */}
         </Switch>
       </main>
     );
