@@ -48,5 +48,14 @@ describe('Homepage', () => {
      .get('[href="/4"] > .card > :nth-child(3)')
      .contains('DENVER Test House');
  });
+  it("As a user I should see Cards on the home page", () => {
+
+  })
+  it('As a user if I put in a bad url I should see a page with a link to home', () => {
+    cy.visit('localhost:3000/doughnuts');
+    cy.get('p').contains('There was an Error. Please return to')
+    cy.get('a').click()
+    cy.url().should('include', '/home')
+ })
 
 });
