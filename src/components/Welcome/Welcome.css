@@ -1,0 +1,20 @@
+.welcome-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.welcome-img{
+  width: 50%;
+}
+
+.welcome-title {
+  font-family: 'Lobster', cursive;
+  text-decoration: solid;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.welcome-title:hover{
+  transform:scale(1.2);
+  color:aliceblue;
+}

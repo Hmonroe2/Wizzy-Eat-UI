@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
-import snoopy from '../../up.png'
+import './Navbar.css';
+import snoopy from '../../up.png';
 import PropTypes from 'prop-types';
 
 function Navbar({ filter, clear, random }) {
@@ -9,14 +9,24 @@ function Navbar({ filter, clear, random }) {
     <div className="nav-container">
       <img src={snoopy} className="snoopy" />
       <h1 className="nav-title">
-        <Link className="nav-title" to="/home" onClick={() => { clear()}}> 
+        <Link
+          className="nav-title"
+          to="/home"
+          onClick={() => {
+            clear();
+          }}>
           Wizzy Eats
         </Link>
       </h1>
-      <button className="nav-button" >
-        <Link className='nav-button' to="/randomRestaurant" onClick={() => {
-          random()
-        }}> Random</Link>
+      <button className="nav-button">
+        <Link
+          className="nav-button"
+          to="/randomRestaurant"
+          onClick={() => {
+            random();
+          }}>
+          Random
+        </Link>
       </button>
       <button
         value="Winter Park"
@@ -34,14 +44,24 @@ function Navbar({ filter, clear, random }) {
         className="nav-button">
         Denver
       </button>
+      <button className="nav-button">
+        <Link
+          className="nav-button"
+          to="/home"
+          onClick={() => {
+            clear();
+          }}>
+          Home
+        </Link>
+      </button>
     </div>
   );
 }
 
-export default Navbar
+export default Navbar;
 
 Navbar.propTypes = {
   clear: PropTypes.func,
   filter: PropTypes.func,
-  random: PropTypes.func
-}
+  random: PropTypes.func,
+};

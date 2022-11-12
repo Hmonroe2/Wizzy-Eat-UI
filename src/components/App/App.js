@@ -7,7 +7,9 @@ import './App.css';
 import Navbar from '../Navbar/Navbar';
 import RandomRest from '../RandomRest/RandomRest';
 import PropTypes from 'prop-types';
-
+import Welcome from '../Welcome/Welcome';
+import Error from '../Error/Error';
+import DenverRest from '../../FilterRest/DenverRest';
 
 
 class App extends Component {
@@ -17,7 +19,7 @@ class App extends Component {
       restaurants: [],
       filtered: [],
       random: [], 
-      error: ' ',
+      error: [],
     };
   }
 
@@ -44,33 +46,58 @@ class App extends Component {
       this.setState({ error: `There was an error retrieving the data.` });
     }
   };
+
   clearFiltered = () => {
     this.setState({ filtered: [] });
   };
 
   render() {
     if (!this.state.restaurants) {
-      return <p> {this.state.error}</p>;
+      return <div> <Error error={ this.state.error } /> </div>;
     }
     return (
       <main className="App">
-        <Navbar filter={this.filterRestaurants} clear={this.clearFiltered} random={ this.generateRandom} />
         <Switch>
+          <Route exact path="/" component={Welcome} />
           <Route exact path="/home">
+            <Navbar
+              filter={this.filterRestaurants}
+              clear={this.clearFiltered}
+              random={this.generateRandom}
+            />
             <Restaurants
               restaurants={this.state.restaurants}
-              favorites={this.state.filtered}
+              filtered={this.state.filtered}
             />
           </Route>
           <Route exact path="/randomRestaurant">
-            <RandomRest data={ this.state.random } />
+            <Navbar
+              filter={this.filterRestaurants}
+              clear={this.clearFiltered}
+              random={this.generateRandom}
+            />
+            <RandomRest data={this.state.random} />
           </Route>
           <Route
             path="/:id"
             render={({ match }) => {
-              return <Details id={match.params.id} name={match.params.name} />;
+              return (
+                <Details
+                  id={match.params.id}
+                  name={match.params.name}
+                  filter={this.filterRestaurants}
+                  clear={this.clearFiltered}
+                  random={this.generateRandom}
+                />
+              );
             }}
           />
+          {/* <Route path="/denver" >
+            <FilterRest data={this.state.restaurants} />
+          </Route> */}
+          {/* <Route exact path="/denver" >
+            <DenverRest data={this.state.restaurants} /> 
+          </Route> */}
         </Switch>
       </main>
     );
