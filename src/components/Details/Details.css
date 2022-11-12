@@ -1,6 +1,6 @@
 .detail-section {
   width: 100vw;
-  height: 100vh;
+  height:100%;
   display: flex;
   justify-content: center;
 }
@@ -45,4 +45,5 @@
 .detail-card-name {
   margin: 0;
   color: var(--clr-background);
+  text-decoration: none;
 }

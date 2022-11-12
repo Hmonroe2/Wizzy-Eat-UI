@@ -3,6 +3,7 @@
   height: 25rem;
   width: 15rem;
   contain: content;
+  text-decoration: none;
  }
  
  .card{
@@ -43,4 +44,5 @@
 .card-name{
   margin: 0; 
   color: var(--clr-background);
+  font-family: 'Lobster', cursive;
 }

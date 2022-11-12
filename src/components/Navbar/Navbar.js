@@ -2,11 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import snoopy from '../../up.png'
+import PropTypes from 'prop-types';
 
 function Navbar({ filter, clear, random }) {
-  // console.log(generateRandom());
-  console.log(clear)
-  
   return (
     <div className="nav-container">
       <img src={snoopy} className="snoopy" />
@@ -41,3 +39,9 @@ function Navbar({ filter, clear, random }) {
 }
 
 export default Navbar
+
+Navbar.propTypes = {
+  clear: PropTypes.func,
+  filter: PropTypes.func,
+  random: PropTypes.func
+}
