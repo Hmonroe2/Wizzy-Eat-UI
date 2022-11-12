@@ -22,12 +22,24 @@ class Details extends Component {
   };
 
   render() {
-    // console.log(this.state.restaurant)
+    const rest = this.state.restaurant
     return (
-      <div>
-        <img src={ this.state.restaurant.image} />
-        <p>I am Details</p>
-      </div>
+      <section className="detail-section">
+        <div className="detail-container">
+          <div className="detail-img-container">
+            <img className="detail-img" src={this.state.restaurant.image} />
+          </div>
+          <p className="description">Name </p>
+          <p className="card-name">{rest.name}</p>{' '}
+          <p className="description">Address </p>
+          <p className="card-name">{rest.address}</p>{' '}
+          <p className="description">Phone </p>
+          <p className="card-name">{rest.phone}</p>{' '}
+          <p className="description">Hours </p>
+          <p className="card-name">{rest.hours}</p>
+          <p className="description" href={rest.website}>Website </p>
+        </div>
+      </section>
     );
   }
 }

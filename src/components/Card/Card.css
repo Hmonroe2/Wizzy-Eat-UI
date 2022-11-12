@@ -8,12 +8,14 @@
  .card{
   display: flex;
   flex-direction: column;
-  /* height: 50vh;
-  width: 30%; */
-  border: solid 10px var(--clr-lightgray);
+  border: solid 5px rgba(245, 245, 245, 0.829);
   margin: 4px;
   background-color: var(--clr-lightgray);
   border-radius: 5%;
+}
+.card:hover{
+  box-shadow: 5px 5px 5px white;
+  transform:rotate(2deg);
 }
 
 .img-container{
@@ -35,6 +37,7 @@
   font-family: 'Lobster', cursive;
   margin:0; 
   margin: 1%;
+  text-decoration: underline;
 
 }
 .card-name{

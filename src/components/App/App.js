@@ -14,13 +14,13 @@ class App extends Component {
     this.state = {
       restaurants: '',
       filtered: [],
+      random: [], 
       error: ' ',
     };
   }
 
   filterRestaurants = (value) => {
-    this.setState({ filtered: '' });
-    console.log(value);
+    this.setState({ filtered: [] });
     const byType = this.state.restaurants.filter(
       (rest) => rest.location === value
     );
@@ -28,8 +28,9 @@ class App extends Component {
   };
 
   generateRandom = () => {
+    this.setState({random: []})
     const randomRest = this.state.restaurants[Math.floor(Math.random() * 9)];
-    return randomRest;
+    return this.setState({random: randomRest});
   };
 
   componentDidMount = async () => {
@@ -42,29 +43,25 @@ class App extends Component {
     }
   };
   clearFiltered = () => {
-    this.setState({ filtered: [] })
-  }
+    this.setState({ filtered: [] });
+  };
 
   render() {
-    console.log('this.state.favorites::',this.state.filtered);
     if (!this.state.restaurants) {
       return <p> {this.state.error}</p>;
     }
     return (
-      <div className="App">
-        <Navbar filter={this.filterRestaurants} clear={this.clearFiltered} />
+      <main className="App">
+        <Navbar filter={this.filterRestaurants} clear={this.clearFiltered} random={ this.generateRandom} />
         <Switch>
           <Route exact path="/home">
             <Restaurants
               restaurants={this.state.restaurants}
               favorites={this.state.filtered}
             />
-            {/* {!this.state.filtered && (
-              <Restaurants restaurants={this.state.filtered} />
-            )} */}
           </Route>
           <Route exact path="/randomRestaurant">
-            <RandomRest data={this.generateRandom()} />
+            <RandomRest data={ this.state.random } />
           </Route>
           <Route
             path="/:id"
@@ -73,10 +70,10 @@ class App extends Component {
             }}
           />
           <Route exact path="/denver">
-            {/* <FilteredRest data={this.state.filtered} />  */}
+          
           </Route>
         </Switch>
-      </div>
+      </main>
     );
   }
 }

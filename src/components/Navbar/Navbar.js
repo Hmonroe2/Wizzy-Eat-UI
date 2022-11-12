@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 import snoopy from '../../up.png'
 
-function Navbar({ filter, clear}) {
+function Navbar({ filter, clear, random }) {
   // console.log(generateRandom());
   console.log(clear)
   
@@ -15,8 +15,10 @@ function Navbar({ filter, clear}) {
           Wizzy Eats
         </Link>
       </h1>
-      <button className="nav-button">
-        <Link className='nav-button'to="/randomRestaurant"> Random</Link>
+      <button className="nav-button" >
+        <Link className='nav-button' to="/randomRestaurant" onClick={() => {
+          random()
+        }}> Random</Link>
       </button>
       <button
         value="Winter Park"
