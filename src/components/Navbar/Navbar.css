@@ -1,28 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 
-.nav-container{
-  margin-bottom: 5%;
+.nav-container {
+  margin-bottom: 2%;
+  height: 25%;
 }
 
-.nav-title{
+.nav-title {
   font-family: 'Lobster', cursive;
   text-decoration: solid;
   font-size: 3rem;
-  margin: 3%;
+  margin: 0;
   animation: text-flicker 2s blue linear-infinite;
-  
+
 }
-.snoopy{
+
+.snoopy {
   height: auto;
-  width: 23%;
+  width: 20%;
+  margin-bottom: 0;
 }
-.nav-button{
+
+.nav-button {
   background: var(--clr-lightblue);
   color: black;
-  margin: 1%;
+  margin: .6%;
   border-radius: 10%;
-  box-shadow: 2px 2px 2px white;
-  text-decoration: solid;
   contain: content;
+  font-family: 'Lobster', cursive;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.nav-button:hover {
+  box-shadow: 2px 2px 2px var(--clr-lightblue);
 }
