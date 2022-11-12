@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './RandomRest.css';
 import ballon from '../../ballon.png';
+import PropTypes from 'prop-types';
 
 function RandomRest({ data }) {
   return (
@@ -18,3 +19,7 @@ function RandomRest({ data }) {
 }
 
 export default RandomRest;
+
+RandomRest.propType = {
+  data: PropTypes.object,
+}

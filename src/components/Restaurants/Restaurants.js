@@ -1,15 +1,15 @@
 import React from 'react';
 import Card from '../Card/Card';
 import './Restaurants.css';
+import PropTypes from 'prop-types';
 
 const Restaurants = ({ restaurants, favorites }) => {
-  console.log(favorites)
- let data = restaurants
+  let data = restaurants;
   if (favorites.length > 0) {
-    data = favorites
+    data = favorites;
   } else {
-    favorites = []
-    data = restaurants
+    favorites = [];
+    data = restaurants;
   }
 
   const restCards = data.map((rest) => {
@@ -30,3 +30,8 @@ const Restaurants = ({ restaurants, favorites }) => {
 };
 
 export default Restaurants;
+
+Restaurants.propTypes = {
+  restaurants: PropTypes.array,
+  favorites: PropTypes.array,
+};

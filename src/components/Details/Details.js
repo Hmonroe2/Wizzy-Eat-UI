@@ -1,13 +1,15 @@
+
 import React, { Component } from 'react'
 import { fetchData } from '../../apiCalls';
-import'./Details.css'
+import './Details.css'
+import PropTypes from 'prop-types';
+
 
 class Details extends Component {
   constructor(props) {
-    console.log(props.name)
     super();
     this.state = {
-      restaurant: ' ',
+      restaurant: [],
       id: props.id,
     };
   }
@@ -27,7 +29,7 @@ class Details extends Component {
       <section className="detail-section">
         <div className="detail-container">
           <div className="detail-img-container">
-            <img className="detail-img" src={this.state.restaurant.image} />
+            <img className="detail-img" src={rest.image} alt={rest.name} />
           </div>
           <p className="description">Name </p>
           <p className="card-name">{rest.name}</p>{' '}
@@ -45,3 +47,9 @@ class Details extends Component {
 }
 
 export default Details
+
+Details.propTypes = {
+  restaurant: PropTypes.array,
+  id: PropTypes.string,
+  props: PropTypes.string
+}

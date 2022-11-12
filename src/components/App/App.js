@@ -6,13 +6,15 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Navbar from '../Navbar/Navbar';
 import RandomRest from '../RandomRest/RandomRest';
-import FilteredRest from '../FilteredRest/FilteredRest';
+import PropTypes from 'prop-types';
+
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      restaurants: '',
+      restaurants: [],
       filtered: [],
       random: [], 
       error: ' ',
@@ -69,9 +71,6 @@ class App extends Component {
               return <Details id={match.params.id} name={match.params.name} />;
             }}
           />
-          <Route exact path="/denver">
-          
-          </Route>
         </Switch>
       </main>
     );
@@ -79,3 +78,9 @@ class App extends Component {
 }
 
 export default App;
+
+App.propTypes = {
+  restaurants: PropTypes.array,
+  filtered: PropTypes.array,
+  random: PropTypes.array
+}
