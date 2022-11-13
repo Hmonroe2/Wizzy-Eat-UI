@@ -1,9 +1,13 @@
 describe('Homepage', () => {
   beforeEach(() => {
     cy.visit('localhost:3000/home');
-    cy.intercept('GET', 'http://localhost:3001/api/v1/restaurants', {
-      fixture: 'restaurants.json',
-    }).as('restaurants');
+    cy.intercept(
+      'GET',
+      'https://wizzy-eats-api.vercel.app/api/v1/restaurants',
+      {
+        fixture: 'restaurants.json',
+      }
+    ).as('restaurants');
   });
 
   it('As a user, I should see a nav bar with the title and picture.', () => {

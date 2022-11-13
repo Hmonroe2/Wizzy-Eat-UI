@@ -2,17 +2,25 @@ describe('Details', () => {
   beforeEach(() => {
 
     cy.visit('http://localhost:3000/1')
-    cy.intercept('GET', 'http://localhost:3001/api/v1/restaurants/1', {
-      statusCode: (201),
-    
-      fixture: 'restaurant.json',
-    }).as('restaurant');
+    cy.intercept(
+      'GET',
+      'https://wizzy-eats-api.vercel.app/api/v1/restaurants/1',
+      {
+        statusCode: 201,
+
+        fixture: 'restaurant.json',
+      }
+    ).as('restaurant');
   });
   it('As a user, I should be able to click on a card and see its details', () => {
     cy.visit('localhost:3000/home');
-    cy.intercept('GET', 'http://localhost:3001/api/v1/restaurants', {
-      fixture: 'restaurants.json',
-    }).as('restaurants');
+    cy.intercept(
+      'GET',
+      'https://wizzy-eats-api.vercel.app/api/v1/restaurants',
+      {
+        fixture: 'restaurants.json',
+      }
+    ).as('restaurants');
     cy.get('[href="/1"] > .card').click();
     cy.url().should('include', '/1')
   })
