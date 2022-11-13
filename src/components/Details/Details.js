@@ -18,7 +18,7 @@ class Details extends Component {
   componentDidMount = async () => {
     try {
       const result = await fetchData(`${this.state.id}`);
-      const data = await result.jso();
+      const data = await result.json();
       this.setState({ restaurant: data.restaurant });
     } catch (error) {
       this.setState({ error: `There was an error retrieving the data.` });
@@ -26,7 +26,7 @@ class Details extends Component {
   };
 
   render() {
-    if (!this.state.restaurant.length) {
+    if (this.state.error) {
       return (
         <Error /> 
       );

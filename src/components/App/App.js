@@ -33,7 +33,7 @@ class App extends Component {
 
   generateRandom = () => {
     this.setState({random: []})
-    const randomRest = this.state.restaurants[Math.floor(Math.random() * 9)];
+    const randomRest = this.state.restaurants[Math.floor(Math.random() * this.state.restaurants.length)];
     return this.setState({random: randomRest});
   };
 
@@ -52,7 +52,7 @@ class App extends Component {
   };
 
   render() {
-    if (!this.state.restaurants.length) {
+    if (this.state.error.length) {
       return(
       <div>
         <Error /> 
