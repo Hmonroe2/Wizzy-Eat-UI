@@ -1,86 +1,76 @@
 {
   "restaurants": [
-        {
-          "id": 1,
-          "name": "DENVER Test House ",
-          "location": "Denver",
-          "hours": [
-            "Monday:11:00 AM-10:30 PM",
-            "Tuesday: 11:00 AM - 10:30 PM",
-            "Wednesday: 11:00 AM - 10:30 PM",
-            "Thursday: 11:00 AM - 10:30 PM",
-            "Friday: 11:00 AM - 11:00 PM",
-            "Saturday: 11:00 AM - 11:00 PM",
-            "Sunday: 11:00 AM - 10:30 PM"
-          ],
-          "image":
-            "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
-          "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
-          "phone": "(303) 790-7453",
-          "website": "https://www.yardhouse.com,"
-        },
-      {
-          "id": 2,
-          "name": "WINTER Test House ",
-          "location": "Winter Park",
-          "hours": [
-            "Monday:11:00 AM-10:30 PM",
-            "Tuesday: 11:00 AM - 10:30 PM",
-            "Wednesday: 11:00 AM - 10:30 PM",
-            "Thursday: 11:00 AM - 10:30 PM",
-            "Friday: 11:00 AM - 11:00 PM",
-            "Saturday: 11:00 AM - 11:00 PM",
-            "Sunday: 11:00 AM - 10:30 PM"
-          ],
-          "image":
-            "https://miro.medium.com/max/1400/0*i1XbVjul86E_CSyf.jpg",
-          "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
-          "phone": "(303) 790-7453",
-          "website": "https://www.yardhouse.com,"
-        },
-           {
-          "id": 3,
-          "name": "WINTER Test House ",
-          "location": "Winter Park",
-          "hours": [
-            "Monday:11:00 AM-10:30 PM",
-            "Tuesday: 11:00 AM - 10:30 PM",
-            "Wednesday: 11:00 AM - 10:30 PM",
-            "Thursday: 11:00 AM - 10:30 PM",
-            "Friday: 11:00 AM - 11:00 PM",
-            "Saturday: 11:00 AM - 11:00 PM",
-            "Sunday: 11:00 AM - 10:30 PM"
-          ],
-          "image":
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwjha8y67LwANzUPjJaZfg5eKEk4UxHwd5-GSOZyfrnbsVVXmbLBqo9a3a9NiZNZPGWU&usqp=CAU",
-          "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
-          "phone": "(303) 790-7453",
-          "website": "https://www.yardhouse.com,"
-        },
-           {
-          "id": 4,
-          "name": "DENVER Test House ",
-          "location": "Denver",
-          "hours": [
-            "Monday:11:00 AM-10:30 PM",
-            "Tuesday: 11:00 AM - 10:30 PM",
-            "Wednesday: 11:00 AM - 10:30 PM",
-            "Thursday: 11:00 AM - 10:30 PM",
-            "Friday: 11:00 AM - 11:00 PM",
-            "Saturday: 11:00 AM - 11:00 PM",
-            "Sunday: 11:00 AM - 10:30 PM"
-          ],
-          "image":
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTca-L0zhw04g4wWGa_K0e33-z9iuHZu9gvBq1Ox96eUmL9Ir5KbiIt-ZtvBHNczjF7o&usqp=CAU",
-          "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
-          "phone": "(303) 790-7453",
-          "website": "https://www.yardhouse.com,"
-        }
-
-
-
-
-
-
+    {
+      "id": 1,
+      "name": "DENVER Test House ",
+      "location": "Denver",
+      "hours": [
+        "Monday:11:00 AM-10:30 PM",
+        "Tuesday: 11:00 AM - 10:30 PM",
+        "Wednesday: 11:00 AM - 10:30 PM",
+        "Thursday: 11:00 AM - 10:30 PM",
+        "Friday: 11:00 AM - 11:00 PM",
+        "Saturday: 11:00 AM - 11:00 PM",
+        "Sunday: 11:00 AM - 10:30 PM"
+      ],
+      "image": "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
+      "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
+      "phone": "(303) 790-7453",
+      "website": "https://www.yardhouse.com,"
+    },
+    {
+      "id": 2,
+      "name": "WINTER Test House ",
+      "location": "Winter Park",
+      "hours": [
+        "Monday:11:00 AM-10:30 PM",
+        "Tuesday: 11:00 AM - 10:30 PM",
+        "Wednesday: 11:00 AM - 10:30 PM",
+        "Thursday: 11:00 AM - 10:30 PM",
+        "Friday: 11:00 AM - 11:00 PM",
+        "Saturday: 11:00 AM - 11:00 PM",
+        "Sunday: 11:00 AM - 10:30 PM"
+      ],
+      "image": "https://miro.medium.com/max/1400/0*i1XbVjul86E_CSyf.jpg",
+      "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
+      "phone": "(303) 790-7453",
+      "website": "https://www.yardhouse.com,"
+    },
+    {
+      "id": 3,
+      "name": "WINTER Test House ",
+      "location": "Winter Park",
+      "hours": [
+        "Monday:11:00 AM-10:30 PM",
+        "Tuesday: 11:00 AM - 10:30 PM",
+        "Wednesday: 11:00 AM - 10:30 PM",
+        "Thursday: 11:00 AM - 10:30 PM",
+        "Friday: 11:00 AM - 11:00 PM",
+        "Saturday: 11:00 AM - 11:00 PM",
+        "Sunday: 11:00 AM - 10:30 PM"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEwjha8y67LwANzUPjJaZfg5eKEk4UxHwd5-GSOZyfrnbsVVXmbLBqo9a3a9NiZNZPGWU&usqp=CAU",
+      "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
+      "phone": "(303) 790-7453",
+      "website": "https://www.yardhouse.com,"
+    },
+    {
+      "id": 4,
+      "name": "DENVER Test House ",
+      "location": "Denver",
+      "hours": [
+        "Monday:11:00 AM-10:30 PM",
+        "Tuesday: 11:00 AM - 10:30 PM",
+        "Wednesday: 11:00 AM - 10:30 PM",
+        "Thursday: 11:00 AM - 10:30 PM",
+        "Friday: 11:00 AM - 11:00 PM",
+        "Saturday: 11:00 AM - 11:00 PM",
+        "Sunday: 11:00 AM - 10:30 PM"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrTca-L0zhw04g4wWGa_K0e33-z9iuHZu9gvBq1Ox96eUmL9Ir5KbiIt-ZtvBHNczjF7o&usqp=CAU",
+      "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
+      "phone": "(303) 790-7453",
+      "website": "https://www.yardhouse.com,"
+    }
   ]
 }

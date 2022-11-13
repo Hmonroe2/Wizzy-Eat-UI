@@ -1,23 +1,30 @@
 describe('Details', () => {
   beforeEach(() => {
+    cy.visit('http://localhost:3000/1');
+    cy.intercept(
+      'GET',
+      'https://wizzy-eats-api.vercel.app/api/v1/restaurants/1',
+      {
+        statusCode: 201,
 
-    cy.visit('http://localhost:3000/1')
-    cy.intercept('GET', 'http://localhost:3001/api/v1/restaurants/1', {
-      statusCode: (201),
-    
-      fixture: 'restaurant.json',
-    }).as('restaurant');
+        fixture: 'restaurant.json',
+      }
+    ).as('restaurant');
   });
   it('As a user, I should be able to click on a card and see its details', () => {
     cy.visit('localhost:3000/home');
-    cy.intercept('GET', 'http://localhost:3001/api/v1/restaurants', {
-      fixture: 'restaurants.json',
-    }).as('restaurants');
+    cy.intercept(
+      'GET',
+      'https://wizzy-eats-api.vercel.app/api/v1/restaurants',
+      {
+        fixture: 'restaurants.json',
+      }
+    ).as('restaurants');
     cy.get('[href="/1"] > .card').click();
-    cy.url().should('include', '/1')
-  })
+    cy.url().should('include', '/1');
+  });
   it('As a user, I should see a detail card for a restaurant', () => {
-    cy.get('.detail-container')
+    cy.get('.detail-container');
     cy.get('.detail-img');
     cy.get('.detail-container > :nth-child(2)').contains('Name');
     cy.get('.detail-container > :nth-child(3)').contains('DENVER Test House');

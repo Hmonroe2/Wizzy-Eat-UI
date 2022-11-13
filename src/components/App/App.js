@@ -11,14 +11,13 @@ import Welcome from '../Welcome/Welcome';
 import Error from '../Error/Error';
 import DenverRest from '../../FilterRest/DenverRest';
 
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
       restaurants: [],
       filtered: [],
-      random: [], 
+      random: [],
       error: [],
     };
   }
@@ -32,9 +31,12 @@ class App extends Component {
   };
 
   generateRandom = () => {
-    this.setState({random: []})
-    const randomRest = this.state.restaurants[Math.floor(Math.random() * this.state.restaurants.length)];
-    return this.setState({random: randomRest});
+    this.setState({ random: [] });
+    const randomRest =
+      this.state.restaurants[
+        Math.floor(Math.random() * this.state.restaurants.length)
+      ];
+    return this.setState({ random: randomRest });
   };
 
   componentDidMount = async () => {
@@ -53,11 +55,12 @@ class App extends Component {
 
   render() {
     if (this.state.error.length) {
-      return(
-      <div>
-        <Error /> 
-      </div>
-    )}
+      return (
+        <div>
+          <Error />
+        </div>
+      );
+    }
     return (
       <main className="App">
         <Switch>
@@ -95,12 +98,6 @@ class App extends Component {
               );
             }}
           />
-          {/* <Route path="/denver" >
-            <FilterRest data={this.state.restaurants} />
-          </Route> */}
-          {/* <Route exact path="/denver" >
-            <DenverRest data={this.state.restaurants} /> 
-          </Route> */}
         </Switch>
       </main>
     );
@@ -112,5 +109,5 @@ export default App;
 App.propTypes = {
   restaurants: PropTypes.array,
   filtered: PropTypes.array,
-  random: PropTypes.array
-}
+  random: PropTypes.array,
+};

@@ -27,16 +27,17 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
-.random-name{
+
+.random-name {
   margin-top: 4%;
   margin-bottom: 2%;
   color: black;
   font-family: 'Lobster', cursive;
   font-size: 3em;
 }
-.ballon{
+
+.ballon {
   height: auto;
   width: 30%;
   position: relative;
- 
 }
