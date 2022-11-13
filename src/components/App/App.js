@@ -66,11 +66,6 @@ class App extends Component {
     return (
       <main className="App">
         <Switch>
-          {/* {this.state.loading === false && (
-            <div className="loading-gif">
-              <img src={giphy} alt="old man and dog" />
-            </div>
-          )} */}
           <Route exact path="/" component={Welcome} />
           {this.state.loading === true && (
             <div className="loading-gif">

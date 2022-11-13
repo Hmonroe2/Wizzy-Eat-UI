@@ -4,6 +4,7 @@ import './Details.css';
 import PropTypes from 'prop-types';
 import Navbar from '../Navbar/Navbar';
 import Error from '../Error/Error';
+import giphy from '../../giphy.gif'
 
 class Details extends Component {
   constructor(props) {
@@ -17,9 +18,10 @@ class Details extends Component {
   }
   componentDidMount = async () => {
     try {
+      this.setState({ loading: true });
       const result = await fetchData(`${this.state.id}`);
       const data = await result.json();
-      this.setState({ restaurant: data.restaurant });
+      this.setState({ restaurant: data.restaurant, loading: false });
     } catch (error) {
       this.setState({ error: `There was an error retrieving the data.` });
     }
@@ -39,6 +41,12 @@ class Details extends Component {
           clear={this.state.props.clear}
           random={this.state.props.random}
         />
+        {this.state.loading === true && (
+          <div className="loading-gif">
+            <img src={giphy} alt="old man and dog" />
+            <p> Loading </p>
+          </div>
+        )}
         <div className="detail-container">
           <div className="detail-img-container">
             <img className="detail-img" src={rest.image} alt={rest.name} />
