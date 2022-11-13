@@ -3,7 +3,6 @@ import { fetchData } from '../../apiCalls';
 import './Details.css';
 import PropTypes from 'prop-types';
 import Navbar from '../Navbar/Navbar';
-import { Link } from 'react-router-dom';
 import Error from '../Error/Error';
 
 class Details extends Component {
@@ -36,7 +35,7 @@ class Details extends Component {
     return (
       <section className="detail-section">
         <Navbar
-          filter={this.state.props.filter}
+          filter={this.props.filter}
           clear={this.state.props.clear}
           random={this.state.props.random}
         />

@@ -9,7 +9,6 @@ import RandomRest from '../RandomRest/RandomRest';
 import PropTypes from 'prop-types';
 import Welcome from '../Welcome/Welcome';
 import Error from '../Error/Error';
-import DenverRest from '../../FilterRest/DenverRest';
 
 class App extends Component {
   constructor() {

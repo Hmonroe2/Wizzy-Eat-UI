@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function Navbar({ filter, clear, random }) {
   return (
     <div className="nav-container">
-      <img src={snoopy} className="snoopy" />
+      <img src={snoopy} className="snoopy"  alt="Up old man and boy scout"/>
       <h1 className="nav-title">
         <Link
           className="nav-title"
@@ -41,9 +41,7 @@ function Navbar({ filter, clear, random }) {
         onClick={(event) => {
           filter(event.target.value);
         }}
-        className="nav-button">
-        Denver
-      </button>
+        className="nav-button">Denver</button>
       <button className="nav-button">
         <Link
           className="nav-button"
