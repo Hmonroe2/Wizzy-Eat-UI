@@ -187,43 +187,105 @@ const restaurants = [
     address: '78941 US-40, Winter Park, CO 80482 ',
     phone: ' (970) 363-7113',
     website: 'https://theditchon40.com/',
-  }
+  },
+  {
+    id: 11,
+    name: 'The Golden Mill',
+    location: 'Denver',
+    hours: [
+      'Monday: 11 AM - 9:00 PM',
+      'Tuesday: 11 AM- 9:00 PM',
+      'Wednesday: 11 AM - 9:00 PM',
+      'Thursday: 11 AM - 9:00 PM',
+      'Friday: 11 PM - 10:00 PM',
+      'Saturday: 11:00 AM - 10:00 PM',
+      'Sunday: 11:00 AM - 10:00 PM',
+    ],
+    image:
+      'https://i0.wp.com/images.303magazine.com/uploads/2021/04/149-From-The-Hip-Photo-1.jpg?fit=1800%2C1200&ssl=1',
+    address: '1012 Ford St, Golden, CO, 80401',
+    phone: '(720) 405-6455',
+    website: 'https://thegoldenmill.com/',
+  },
 
-]
-//   {
-//     id: 11,
-//     name: 'Cranellis',
-//     location: 'Denver',
-//     hours: [
-//       'Monday:11:00 AM - 9:00 PM',
-//       'Tuesday: 11:00 AM - 9:00 PM',
-//       'Wednesday: 11:00 AM - 9:00 PM',
-//       'Thursday: 11:00 AM - 9:00 PM',
-//       'Friday: 11:00 AM - 9:30 PM',
-//       'Saturday: 11:00 AM - 9:30 PM',
-//       'Sunday: 11:00 AM - 8:00 PM',
-//     ],
-//     image: ' ',
-//     address: ' ',
-//     phone: ' ',
-//     website: '',
-//   },
-//   {
-//     id: 12,
-//     name: 'Cranellis',
-//     location: 'Denver',
-//     hours: [
-//       'Monday:11:00 AM - 9:00 PM',
-//       'Tuesday: 11:00 AM - 9:00 PM',
-//       'Wednesday: 11:00 AM - 9:00 PM',
-//       'Thursday: 11:00 AM - 9:00 PM',
-//       'Friday: 11:00 AM - 9:30 PM',
-//       'Saturday: 11:00 AM - 9:30 PM',
-//       'Sunday: 11:00 AM - 8:00 PM',
-//     ],
-//     image: ' ',
-//     address: ' ',
-//     phone: ' ',
-//     website: '',
-//   },
-// ];
+  {
+    id: 12,
+    name: 'Sierra',
+    location: 'Denver',
+    hours: [
+      'Monday: 11 AM - 9:00 PM',
+      'Tuesday: 11 AM- 9:00 PM',
+      'Wednesday: 11 AM - 9:00 PM',
+      'Thursday: 11 AM - 9:00 PM',
+      'Friday: 11 PM - 10:00 PM',
+      'Saturday: 11:00 AM - 10:00 PM',
+      'Sunday: 11:00 AM - 10:00 PM',
+    ],
+    image:
+      'https://freight.cargo.site/t/original/i/fa80011ba228ad4aa234ea86f49758213f2a75a40afe125b7c62f3c329dd5b4c/1.jpg',
+    address: '10680 Cabela Dr, Lone Tree, CO, 80124',
+    phone: '(303) 662-8800',
+    website: 'https://www.sierrarestaurant.com/',
+  },
+
+  {
+    id: 13,
+    name: 'La Loma',
+    location: 'Denver',
+    hours: [
+      'Monday: 11 AM - 9:00 PM',
+      'Tuesday: 11 AM- 9:00 PM',
+      'Wednesday: 11 AM - 9:00 PM',
+      'Thursday: 11 AM - 9:00 PM',
+      'Friday: 11 PM - 10:00 PM',
+      'Saturday: 11:00 AM - 10:00 PM',
+      'Sunday: 11:00 AM - 10:00 PM',
+    ],
+    image:
+      'https://douglascountyeats.com/wp-content/uploads/2021/04/la-loma-castle-rock-b9f8014.jpg',
+    address: '6361 Promenade Pkwy, Castle Rock, CO, 80108',
+    phone: '(303) 662-8800',
+    website: 'http://lalomamexican.com/',
+  },
+
+  {
+    id: 14,
+    name: 'The Grille at Grand Elk',
+    location: 'Winter Park',
+    hours: [
+      'Monday: 11 AM - 9:00 PM',
+      'Tuesday: 11 AM- 9:00 PM',
+      'Wednesday: 11 AM - 9:00 PM',
+      'Thursday: 11 AM - 9:00 PM',
+      'Friday: 11 PM - 10:00 PM',
+      'Saturday: 11:00 AM - 10:00 PM',
+      'Sunday: 11:00 AM - 10:00 PM',
+    ],
+    image:
+      'https://www.grandelk.com/wp-content/uploads/sites/7223/2018/11/Grand_Elk_Clubhouse-0231.jpg',
+    address: '1300 10 Mile Dr, Grandby, CO 80446',
+    phone: '(970) 887-3518',
+    website: 'https://www.grandelk.com/',
+  },
+
+  {
+    id: 15,
+    name: 'Stoney’s Winter Park',
+    location: 'Winter Park',
+    hours: [
+      'Monday: 11 AM - 9:00 PM',
+      'Tuesday: 11 AM- 9:00 PM',
+      'Wednesday: 11 AM - 9:00 PM',
+      'Thursday: 11 AM - 9:00 PM',
+      'Friday: 11 PM - 10:00 PM',
+      'Saturday: 11:00 AM - 10:00 PM',
+      'Sunday: 11:00 AM - 10:00 PM',
+    ],
+    image:
+      'https://res.cloudinary.com/miles-extranet-dev/image/upload/v1644274157/Winter_Park/account_photos/679/10203be0ebb223a1a79b9e4b7cd18d02_stoneysinwp.png',
+    address: '120 Parry Peak Way, Winter Park, CO 80468',
+    phone: '(970) 363-7744',
+    website: 'https://www.stoneyswinterpark.com/eat',
+  },
+];
+

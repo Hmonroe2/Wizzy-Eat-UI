@@ -7,7 +7,7 @@ function Error({error}) {
   return (
     <div className='error-container'>
       <img className='error-img' src={bird} />    
-      <p >There was an Error. Please return to <NavLink to='/home'>HOME</NavLink></p>
+      <p className='error-text' >There was an Error. Please return to <NavLink to='/home'>HOME</NavLink></p>
     </div>
   )
 }

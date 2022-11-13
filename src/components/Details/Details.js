@@ -26,7 +26,7 @@ class Details extends Component {
   };
 
   render() {
-    if (!this.state.restaurant.length) {
+    if (this.state.error) {
       return (
         <Error /> 
       );
