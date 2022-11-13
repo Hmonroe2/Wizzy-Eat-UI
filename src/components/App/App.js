@@ -9,6 +9,7 @@ import RandomRest from '../RandomRest/RandomRest';
 import PropTypes from 'prop-types';
 import Welcome from '../Welcome/Welcome';
 import Error from '../Error/Error';
+import giphy from '../../giphy.gif'
 
 class App extends Component {
   constructor() {
@@ -20,6 +21,17 @@ class App extends Component {
       error: [],
     };
   }
+  
+  componentDidMount = async () => {
+    try {
+      this.setState({ loading:true })
+      const result = await fetchData('');
+      const data = await result.json();
+      this.setState({ restaurants: data.restaurants, loading: false });
+    } catch (error) {
+      this.setState({ error: `There was an error retrieving the data.`});
+    }
+  };
 
   filterRestaurants = (value) => {
     this.setState({ filtered: [] });
@@ -38,15 +50,6 @@ class App extends Component {
     return this.setState({ random: randomRest });
   };
 
-  componentDidMount = async () => {
-    try {
-      const result = await fetchData('');
-      const data = await result.json();
-      this.setState({ restaurants: data.restaurants });
-    } catch (error) {
-      this.setState({ error: `There was an error retrieving the data.` });
-    }
-  };
 
   clearFiltered = () => {
     this.setState({ filtered: [] });
@@ -64,6 +67,12 @@ class App extends Component {
       <main className="App">
         <Switch>
           <Route exact path="/" component={Welcome} />
+          {this.state.loading === true && (
+            <div className="loading-gif">
+              <img src={giphy} alt="old man and dog" />
+              <p> Loading </p>
+            </div>
+          )}
           <Route exact path="/home">
             <Navbar
               filter={this.filterRestaurants}

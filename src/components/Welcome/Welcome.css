@@ -1,20 +1,29 @@
 .welcome-container{
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  
 }
 .welcome-img{
   width: 50%;
+  margin-top:2%; 
 }
 
 .welcome-title {
   font-family: 'Lobster', cursive;
   text-decoration: solid;
-  font-size: 3rem;
+  font-size: 5rem;
   margin: 0;
 }
 
-.welcome-title:hover{
+.click-me:hover{
   transform:scale(1.2);
   color:aliceblue;
+}
+.click-me{
+  margin-top: 2%;
+  color: var(--clr-lightblue);
+}
+.welcome-description{
+  font-weight: bold;
+  font-size: 1.8rem;
 }
