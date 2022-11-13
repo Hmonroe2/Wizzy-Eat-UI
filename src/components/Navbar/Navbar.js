@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function Navbar({ filter, clear, random }) {
   return (
     <div className="nav-container">
-      <img src={snoopy} className="snoopy" />
+      <img src={snoopy} className="snoopy"  alt="Up old man and boy scout"/>
       <h1 className="nav-title">
         <Link
           className="nav-title"
