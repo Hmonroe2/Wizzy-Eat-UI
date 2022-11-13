@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('random component', () => {
   beforeEach(() => {
     cy.visit('localhost:3000/home');
     cy.intercept(
@@ -22,6 +22,7 @@ describe('empty spec', () => {
     cy.get('.random-name');
     cy.get('.ballon');
   });
+
   it('As a user, I should be able to click the card to go to the restaurant details', () => {
     cy.get(':nth-child(3) > .nav-button').click();
     cy.url().should('include', '/randomRestaurant');
