@@ -1,21 +1,20 @@
 {
-  "restaurant":{
-          "id": 1,
-          "name": "DENVER Test House ",
-          "location": "Denver",
-          "hours": [
-            "Monday:11:00 AM-10:30 PM",
-            "Tuesday: 11:00 AM - 10:30 PM",
-            "Wednesday: 11:00 AM - 10:30 PM",
-            "Thursday: 11:00 AM - 10:30 PM",
-            "Friday: 11:00 AM - 11:00 PM",
-            "Saturday: 11:00 AM - 11:00 PM",
-            "Sunday: 11:00 AM - 10:30 PM"
-          ],
-          "image":
-            "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
-          "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
-          "phone": "(303) 790-7453",
-          "website": "https://www.yardhouse.com,"
-        }
+  "restaurant": {
+    "id": 1,
+    "name": "DENVER Test House ",
+    "location": "Denver",
+    "hours": [
+      "Monday:11:00 AM-10:30 PM",
+      "Tuesday: 11:00 AM - 10:30 PM",
+      "Wednesday: 11:00 AM - 10:30 PM",
+      "Thursday: 11:00 AM - 10:30 PM",
+      "Friday: 11:00 AM - 11:00 PM",
+      "Saturday: 11:00 AM - 11:00 PM",
+      "Sunday: 11:00 AM - 10:30 PM"
+    ],
+    "image": "https://cdn.pixabay.com/photo/2014/06/03/19/38/road-sign-361514_960_720.png",
+    "address": "8437 Park Meadows Center Dr Lone Tree, CO 80124 ",
+    "phone": "(303) 790-7453",
+    "website": "https://www.yardhouse.com,"
+  }
 }

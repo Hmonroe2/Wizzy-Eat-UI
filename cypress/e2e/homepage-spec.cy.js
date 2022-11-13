@@ -53,21 +53,22 @@ describe('Homepage', () => {
       .contains('DENVER Test House');
   });
   it('As a user I should see multiple cards on the home page', () => {
-    cy.get('[href="/1"] > .card')
+    cy.get('[href="/1"] > .card');
     cy.get('[href="/2"] > .card');
     cy.get('[href="/3"] > .card');
     cy.get('[href="/4"] > .card');
-
   });
   it('As a user the cards should contain an image, name, phone, address', () => {
     cy.get('[href="/1"] > .card').get('.img-container > .card-img');
     cy.get('[href="/1"] > .card > :nth-child(2)').contains('Name');
-    cy.get('[href="/1"] > .card > :nth-child(3)').contains('DENVER Test House')
-    cy.get('[href="/1"] > .card > :nth-child(4)').contains('Phone')
+    cy.get('[href="/1"] > .card > :nth-child(3)').contains('DENVER Test House');
+    cy.get('[href="/1"] > .card > :nth-child(4)').contains('Phone');
     cy.get('[href="/1"] > .card > :nth-child(5)').contains('(303) 790-7453');
-    cy.get('[href="/1"] > .card > :nth-child(6)').contains('Address')
-    cy.get('[href="/1"] > .card > :nth-child(7)').contains('8437 Park Meadows Center Dr Lone Tree, CO 80124');
-  })
+    cy.get('[href="/1"] > .card > :nth-child(6)').contains('Address');
+    cy.get('[href="/1"] > .card > :nth-child(7)').contains(
+      '8437 Park Meadows Center Dr Lone Tree, CO 80124'
+    );
+  });
 
   it('As a user if I put in a bad url I should see a page with a link to home', () => {
     cy.visit('localhost:3000/doughnuts');

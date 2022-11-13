@@ -1,7 +1,6 @@
 describe('Details', () => {
   beforeEach(() => {
-
-    cy.visit('http://localhost:3000/1')
+    cy.visit('http://localhost:3000/1');
     cy.intercept(
       'GET',
       'https://wizzy-eats-api.vercel.app/api/v1/restaurants/1',
@@ -22,10 +21,10 @@ describe('Details', () => {
       }
     ).as('restaurants');
     cy.get('[href="/1"] > .card').click();
-    cy.url().should('include', '/1')
-  })
+    cy.url().should('include', '/1');
+  });
   it('As a user, I should see a detail card for a restaurant', () => {
-    cy.get('.detail-container')
+    cy.get('.detail-container');
     cy.get('.detail-img');
     cy.get('.detail-container > :nth-child(2)').contains('Name');
     cy.get('.detail-container > :nth-child(3)').contains('DENVER Test House');

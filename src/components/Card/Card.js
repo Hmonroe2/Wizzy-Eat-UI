@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import './Card.css'
-import PropTypes from "prop-types"
+import './Card.css';
+import PropTypes from 'prop-types';
 
-const Card = ({ name, image, id , phone, address}) => {
+const Card = ({ name, image, id, phone, address }) => {
   return (
     <Link to={`/${id}`} className="card-containers" aria-label={name}>
       <div className="card" key={id}>
@@ -19,14 +19,14 @@ const Card = ({ name, image, id , phone, address}) => {
       </div>
     </Link>
   );
-}
+};
 
 export default Card;
 
 Card.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  id: PropTypes.number,
-  phone: PropTypes.string,
-  address: PropTypes.string,
-}
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  phone: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+};

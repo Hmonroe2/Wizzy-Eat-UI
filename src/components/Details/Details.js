@@ -13,6 +13,7 @@ class Details extends Component {
       restaurant: [],
       id: props.id,
       props: props,
+      error: [],
     };
   }
   componentDidMount = async () => {
@@ -26,10 +27,8 @@ class Details extends Component {
   };
 
   render() {
-    if (this.state.error) {
-      return (
-        <Error /> 
-      );
+    if (this.state.error.length) {
+      return <Error />;
     }
 
     const rest = this.state.restaurant;
@@ -66,4 +65,5 @@ Details.propTypes = {
   restaurant: PropTypes.array,
   id: PropTypes.string,
   props: PropTypes.string,
+  error: PropTypes.array,
 };
