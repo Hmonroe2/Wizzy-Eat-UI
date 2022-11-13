@@ -22,6 +22,8 @@
 ![Screen Shot 2022-11-13 at 12 50 29 PM](https://user-images.githubusercontent.com/102885322/201541752-3dc3ff12-3d95-401f-85fe-fb38b8fad9b3.png)
 ![Screen Shot 2022-11-13 at 12 49 41 PM](https://user-images.githubusercontent.com/102885322/201541746-6123919c-d860-4a49-8170-5956b6b78646.png)
 ![Screen Shot 2022-11-13 at 12 50 10 PM](https://user-images.githubusercontent.com/102885322/201541750-ec668840-1f34-4199-a6ab-6232d9e73e8e.png)
+![70n7np](https://user-images.githubusercontent.com/102885322/201549403-1b557f9f-df2b-4a6b-babd-0ad7a9f62c0c.gif)
+![70n7ts](https://user-images.githubusercontent.com/102885322/201549421-ce79b320-7c26-4d7f-a5db-d9816ad4e3f3.gif)
 
 ## Features
   - This application features a fully functional restaurant app. The App allows user to get a random restaurant by the click of a button. They can also filter the results based on their location. They user can click on a restaurant card and be taken to the restaurants details. A user can generate a random restaurant by the click of a button. 
