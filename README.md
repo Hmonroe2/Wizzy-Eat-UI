@@ -19,6 +19,9 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Illustrations
+![Screen Shot 2022-11-13 at 12 50 29 PM](https://user-images.githubusercontent.com/102885322/201541752-3dc3ff12-3d95-401f-85fe-fb38b8fad9b3.png)
+![Screen Shot 2022-11-13 at 12 49 41 PM](https://user-images.githubusercontent.com/102885322/201541746-6123919c-d860-4a49-8170-5956b6b78646.png)
+![Screen Shot 2022-11-13 at 12 50 10 PM](https://user-images.githubusercontent.com/102885322/201541750-ec668840-1f34-4199-a6ab-6232d9e73e8e.png)
 
 ## Features
   - This application features a fully functional restaurant app. The App allows user to get a random restaurant by the click of a button. They can also filter the results based on their location. They user can click on a restaurant card and be taken to the restaurants details. A user can generate a random restaurant by the click of a button. 
