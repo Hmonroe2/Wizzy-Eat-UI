@@ -36,7 +36,7 @@ class Details extends Component {
     return (
       <section className="detail-section">
         <Navbar
-          filter={this.state.props.filter}
+          filter={this.props.filter}
           clear={this.state.props.clear}
           random={this.state.props.random}
         />

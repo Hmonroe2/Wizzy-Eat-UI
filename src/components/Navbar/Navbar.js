@@ -41,9 +41,7 @@ function Navbar({ filter, clear, random }) {
         onClick={(event) => {
           filter(event.target.value);
         }}
-        className="nav-button">
-        Denver
-      </button>
+        className="nav-button">Denver</button>
       <button className="nav-button">
         <Link
           className="nav-button"

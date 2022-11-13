@@ -16,21 +16,21 @@ describe('NavBar', () => {
     cy.get('.nav-container').get('h1.nav-title > .nav-title');
   });
   it('As a user, I should see a Random button that takes me to a random restaurant', () => {
-    cy.get('.nav-container').get('.nav-container > :nth-child(3)').click();
+    cy.get('.nav-container').get('.nav-container > :nth-child(3)').contains('Random').click();
     cy.url().should('include', '/randomRestaurant');
   });
-  it('As a user, I should see a Winter park button that takes me tto all the winter park restaurants', () => {
-    cy.get('.nav-container').get('.nav-container > :nth-child(4)').click();
+  it('As a user, I should see a Winter park button that takes me to all the winter park restaurants', () => {
+    cy.get('.nav-container').get('.nav-container > :nth-child(4)').contains('Winter Park').click();
     cy.url().should('include', '/home');
     cy.get('[href="/2"] > .card');
   });
   it('As a user, I should see a Denver park button that takes me to all the denver restaurants', () => {
-    cy.get('.nav-container').get('.nav-container > :nth-child(5)').click();
+    cy.get('.nav-container').get('.nav-container > :nth-child(5)').contains('Denver').click();
     cy.url().should('include', '/home');
     cy.get('[href="/1"] > .card');
   });
   it('As a user, I should see a Home button that takes me to all the restaurants', () => {
-    cy.get('.nav-container').get('.nav-container > :nth-child(6)').click();
+    cy.get('.nav-container').get('.nav-container > :nth-child(6)').contains('Home').click();
     cy.url().should('include', '/home');
   });
 });
