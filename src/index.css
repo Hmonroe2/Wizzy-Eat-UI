@@ -17,9 +17,9 @@
 html {
   height: 100%;
   width: 100%;
-    background: linear-gradient(var(--clr-background), var(--clr-purple));
-      background-repeat: no-repeat;
-      background-size: cover;
+  background: linear-gradient(var(--clr-background), var(--clr-purple));
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body {
@@ -29,10 +29,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: black; */
-  background: linear-gradient(var(--clr-background),var(--clr-purple));
+  background: linear-gradient(var(--clr-background), var(--clr-purple));
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 }
 
 code {
